@@ -1,4 +1,4 @@
-Ex 1
+Ex # 1
 
 var newArray = [1, 2, 3]
 
@@ -17,49 +17,35 @@ var string = "Fleur";
 myArray = ['Thomas', 'Amber', 'Raoul']
 emptyArray = []
 
-for (i = 0; i < myArray.length; i++) {
+for (let i = 0; i < myArray.length; i++) {
     emptyArray.push(myArray[i]);
 }
 
-
-
 .length it is the same as in Ruby
 
- Ex 2
+ Ex # 2
  function FirstName(fn){
  return fn;
  }
  fn = "Fleur"
 
  function firstLastName(fn, ln) {
-   return "fn + ln"
+   //return "fn + ln"
+   let fn = 'Fleur'
+   let ln = 'Tamboezer'
+   let sentence = `Hello ${fn} ${ln}`
+
  }
 
- Ex 3
- This is similar to subject in Ruby
+ Ex # 3
+ "This" is similar to instance variable in Ruby
+ this.name = name;
+ is similar to
+ @name = name in Ruby
 
-class Person
-
- function Person(first, last) {
-    // create "constructor"
+class Person {
+  constructor(first, last) {
     this.first = first;
-    // public variables -- reference current object
     this.last = last;
-
-    var privateFn = function(first, last){
-    // private function
-    }
-
-    this.setName = function(first, last){
-        // public function
-        this.first = first;
-        this.last = last;
-    }
-
-}
-
-Person.prototype.fullName = function() {
-    // extend prototype
-    return this.first + ' ' + this.last;
-    // even at runtime!
+  }
 }
